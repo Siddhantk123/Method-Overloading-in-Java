@@ -36,3 +36,37 @@ ob.shape(5,2,3);
 		System.out.println("Result of ob.test(20.14): "+result);
 	}
 }
+
+
+// another program
+
+
+public class MethodOverloading {
+ 
+    public int add(int a, int b) {
+        System.out.println("Two int parameter add method called");
+        return a + b;
+    }
+ 
+    public int add(int a, int b, int c) {
+        System.out.println("Three int parameter add method called");
+        return a + b + c;
+    }
+ 
+    public double add(double a, double b) {
+        System.out.println("Two double parameter add method called");
+        return a + b;
+    }
+ 
+    public static void main(String[] args) {
+	int sum,i;
+	double j;
+        MethodOverloading mo = new MethodOverloading();
+        i=mo.add(1, 2);
+	System.out.println(i);
+        i=mo.add(1, 2, 3);
+	System.out.println(i);
+        j=mo.add(2d, 5d);
+	System.out.println(j);
+    }
+}
